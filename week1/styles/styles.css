@@ -1,0 +1,173 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --success-color: #2ecc71;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.9)), url('../assets/images/Afri-kids.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.course-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+.progress {
+    height: 8px;
+    margin-top: 10px;
+}
+
+.course-detail-card {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: none;
+}
+
+.lesson-item {
+    padding: 12px 15px;
+    border-left: 3px solid var(--primary-color);
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    transition: all 0.2s;
+}
+
+.lesson-item:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+}
+
+.completed {
+    border-left-color: var(--success-color);
+    background-color: #d4edda;
+}
+
+.completed .lesson-title {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.user-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.login-form, .signup-form {
+    display: none;
+}
+
+.active-form {
+    display: block;
+}
+
+.tab-btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    border-bottom: 3px solid var(--primary-color);
+    background-color: white;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.course-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .course-card {
+        margin-bottom: 20px;
+    }
+}

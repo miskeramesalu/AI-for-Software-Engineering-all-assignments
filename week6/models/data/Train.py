@@ -1,2 +1,0 @@
-callbacks = [EarlyStopping(patience=5, restore_best_weights=True), ModelCheckpoint('best_model.h5', save_best_only=True)]
-history = model.fit(train_gen, validation_data=val_gen, epochs=20, callbacks=callbacks)

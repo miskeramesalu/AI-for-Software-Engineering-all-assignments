@@ -1,7 +1,0 @@
-tensorflow==2.12.0
-tensorflow-lite==2.12.0
-numpy
-matplotlib
-pillow
-scikit-learn
-opencv-python

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Local Login Test Page</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 50px; background: #fafafa; }
+    .container { max-width: 300px; margin: auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input { width: 100%; padding: 8px; margin: 5px 0; }
+    button { width: 100%; padding: 10px; background: #0078d4; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+    #result { margin-top: 15px; font-weight: bold; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login Form</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button id="loginBtn">Login</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    const validUser = "valid_user";
+    const validPass = "valid_pass";
+
+    document.getElementById("loginBtn").addEventListener("click", () => {
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value.trim();
+      const result = document.getElementById("result");
+
+      if (user === validUser && pass === validPass) {
+        result.textContent = "✅ Success: Logged in successfully!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "❌ Invalid credentials, please try again.";
+        result.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>
